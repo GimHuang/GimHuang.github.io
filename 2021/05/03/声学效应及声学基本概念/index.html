@@ -1,0 +1,808 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="en">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="声学," />
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="本文主要介绍了常见的声学效应：遮蔽效应、哈斯效应、鸡尾酒会效应、双耳效应；同时介绍了声学的常用概念。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="声学效应及基本概念">
+<meta property="og:url" content="http://example.com/2021/05/03/%E5%A3%B0%E5%AD%A6%E6%95%88%E5%BA%94%E5%8F%8A%E5%A3%B0%E5%AD%A6%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/index.html">
+<meta property="og:site_name" content="Gim Huang&#39;s Blog">
+<meta property="og:description" content="本文主要介绍了常见的声学效应：遮蔽效应、哈斯效应、鸡尾酒会效应、双耳效应；同时介绍了声学的常用概念。">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2021-05-03T01:54:13.000Z">
+<meta property="article:modified_time" content="2021-05-03T01:58:29.378Z">
+<meta property="article:author" content="Gim Huang">
+<meta property="article:tag" content="声学">
+<meta name="twitter:card" content="summary">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '',
+    scheme: 'Gemini',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://example.com/2021/05/03/声学效应及声学基本概念/"/>
+
+
+
+
+
+  <title>声学效应及基本概念 | Gim Huang's Blog</title>
+  
+
+
+
+
+
+
+
+
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="en">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Gim Huang's Blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/%20" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/%20" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            Archives
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/05/03/%E5%A3%B0%E5%AD%A6%E6%95%88%E5%BA%94%E5%8F%8A%E5%A3%B0%E5%AD%A6%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Gim Huang's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">声学效应及基本概念</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2021-05-03T09:54:13+08:00">
+                2021-05-03
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%AD%A6%E4%B9%A0/" itemprop="url" rel="index">
+                    <span itemprop="name">学习</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>本文主要介绍了常见的声学效应：遮蔽效应、哈斯效应、鸡尾酒会效应、双耳效应；<br>同时介绍了声学的常用概念。</p>
+<span id="more"></span>
+
+<h1 id="典型的声学效应"><a href="#典型的声学效应" class="headerlink" title="典型的声学效应"></a>典型的声学效应</h1><h2 id="遮蔽效应"><a href="#遮蔽效应" class="headerlink" title="遮蔽效应"></a>遮蔽效应</h2><blockquote>
+<p>一个较弱的声音（被遮蔽音）的听觉感受被另一个较强的声音（遮蔽音）所影响的现象称为人耳的遮蔽效应。</p>
+</blockquote>
+<ul>
+<li>被遮蔽音单独存在时的听阈分贝值，或者说在安静环境中能被人耳听到的纯音的最小值称为<strong>绝对耳阈</strong>。</li>
+<li>3-5kHz时绝对闻阈值最小，即人耳对此频段的微弱声音最敏感；在低频和更高频区绝对闻阈值要大得多</li>
+<li>在掩蔽情况下，提高被掩蔽弱音的强度，使人耳能够听见时的闻域称为<strong>掩蔽耳阈</strong>（或<strong>掩蔽门限</strong>），被掩蔽弱音必须提高的分贝值称为<strong>掩蔽量</strong>（或<strong>阈移</strong>）</li>
+</ul>
+<p>实验证明，纯音对纯音，噪音对纯音的遮蔽效应有不同的结论</p>
+<ol>
+<li><p>纯音间的遮蔽：</p>
+<p>处于中等强度时的纯音最有效的遮蔽出现在它的频率附近；低频的纯音可以有效地遮蔽高频的纯音，而反过来则作用很小。</p>
+</li>
+<li><p>噪音对纯音的遮蔽：</p>
+<p>若遮蔽声为宽带噪声，被遮蔽声为纯音，则它产生的遮蔽门限在低频段一般高于噪声功率谱密度17 dB，较为平坦；超过500 Hz时大约每10倍频程增大10 dB。</p>
+<p>若遮蔽声为窄带噪声，被遮蔽声为纯音，则情况比较复杂。其中位于遮蔽音附近的由纯音分量组成的指代窄带噪声即临界频带的遮蔽作用最明显。所谓临界频带，指当某个纯音被以它为中心频率，且具有一定带宽的连续噪声所掩蔽时，若该纯音刚好能被听到时的功率等于这一频带内的噪声功率，则这一带宽称为临界频带宽度。</p>
+<p>当某个纯音位于遮蔽声的临界频带之外时，遮蔽效应仍然存在。</p>
+</li>
+</ol>
+<p>掩蔽效应可以分为频域掩蔽和时域掩蔽。</p>
+<p><strong>频域掩蔽</strong>是指掩蔽声与被掩蔽声同时作用时发生掩蔽效应，又称同时掩蔽。</p>
+<p><strong>时域掩蔽</strong>是指掩蔽效应发生在掩蔽声与被掩蔽声不同时出现时，又称异时掩蔽。</p>
+<h2 id="哈斯效应"><a href="#哈斯效应" class="headerlink" title="哈斯效应"></a>哈斯效应</h2><p>实际中多个声源同时存在的情况非常普遍。若两个声源强度相等，先后到达人耳，如果其中一个延迟时间在30 ms以内，听觉上将感到声音好像只来自未延迟的声源，并不会感觉到经过延迟的声源的存在；当延迟时间超过30 ms而未达到50 ms时，听觉上可以识别出已延迟的声源存在，但仍然感觉声音来自未经延迟的声源；只有延迟时间超过50 ms时，听觉上才会感到延迟声成为一个清晰的回声。</p>
+<p>上述效应称为哈斯效应，有时也称为优先效应(Precedence Effect)</p>
+<h2 id="鸡尾酒会效应"><a href="#鸡尾酒会效应" class="headerlink" title="鸡尾酒会效应"></a>鸡尾酒会效应</h2><p>鸡尾酒会效应，也称选择性关注(Selective Attention)，是指人的一种听力选择能力，在这种情况下，注意力集中在某一个人的谈话之中而忽略背景中其他的对话或者噪音。</p>
+<h2 id="双耳效应"><a href="#双耳效应" class="headerlink" title="双耳效应"></a>双耳效应</h2><p>双耳效应是人们依靠双耳间的强度差、时间差和音色差判断声音方位的效应。</p>
+<p>如果声音来自听音者的正前方，由于声源到左右耳的距离相等，从而声波到达左右耳的时间差(相位差)、音色差为零，此时感受出声音来自听音者的正前方，而不是偏向某一侧。声音强弱不同时，可以感受出声源与听音者之间的距离。</p>
+<p>由于双耳的生理结构复杂，且对称分布于脑部两侧，使得对于不同空间方位的声波到达双耳存在一系列差异，双耳利用这些线索完成了空间声定位等复杂的工作。</p>
+<p>双耳差异主要包括：</p>
+<ol>
+<li><p>双耳时间差（Inter-aural Time Difference, ITD）</p>
+<p>由于左右耳之间有一定的距离，因此除了来自前方和正后方的声音之外，由其他方向传来的声音到达两耳的时间就有先后，从而造成时间差。如果声源偏右，则声音必先到达右耳，然后达到左耳。声源约是偏向一侧，则时间差也越大。实验证明，当声源在两耳连线上时，时间差约为0.62 ms。</p>
+</li>
+<li><p>双耳声级差（Inter-aural Level Difference, ILD）</p>
+<p>两耳之间的距离虽然很近，但是由于头颅对声音的阻隔作用，声音到达两耳的声级就可能不同。如果声源偏左，则左耳感觉声级大一些，而右耳感觉声级小一些。当声源在两耳连线上时，声级差可达25 dB左右。</p>
+</li>
+<li><p>双耳相位差（Inter-aural Phase Difference, IPD）</p>
+<p>声音是以波的形式传播的，而声波在空间不同位置上的相位是不同的（除非刚好相距一个波长）。由于两耳在空间上的传播距离，所以声波达到两耳的相位就可能有差别。耳朵内的鼓膜是随声波而振动的，这个振动的相位差也就成为人耳判别声源方位的一个因素。当然，频率越低，相位差定位感觉越明显。</p>
+</li>
+<li><p>双耳音色差</p>
+<p>声波如果从右侧的某个方向上传来，则要绕过头部的某些部分才能到达左耳。已知声波的绕射能力同波长与障碍物尺寸之间的比例有关。人头的直径约为20 cm，相当于1700 Hz声波的波长，因此频率为1000 Hz以上的声波绕过头颅的能力较差，衰减越大。也就是说，同一个声音中的各个分量绕过头部的能力各不相同，频率越高的分量衰减越大。于是左耳听到的音色与右耳听到的音色就存在差异。只要声音不是从正前方（或正后方）来，两耳听到音色就会不同，这也就是人们判断声源方位的一种依据。</p>
+</li>
+</ol>
+<h1 id="常用概念"><a href="#常用概念" class="headerlink" title="常用概念"></a>常用概念</h1><ol>
+<li><p><strong>幅度（Amplitude）</strong></p>
+<p>幅度或称为幅值，是描述信号在各个时间或频率刻度上的能量大小的物理量。在频域，信号实部和虚部的平方和再开二次方根对应的就是幅值。其单位与信号的种类有关。</p>
+</li>
+<li><p><strong>相位（Phase）</strong></p>
+<p>相位也称为相角，描述的是信号的能量变化方向，与能量大小也存在关系。对一列声波而言，描述在特定时刻的位置信息：是否在波峰、波谷或它们之间的某点的一种标度。常以度（角度）或弧度为单位。当声波波形以周期方式变化时，波形循环一周即为360度。在频域，信号的虚部除以实部再取反正切就是相位。</p>
+</li>
+<li><p><strong>能量（Energy）</strong></p>
+<p>通常把信号在一定时间内的二次方之和（或信号二次方对时间积分）称为信号的能量，单位是J。如果信号的能量是有限值，则称其为能量有限信号，简称能量信号。</p>
+</li>
+<li><p><strong>功率（Power）</strong></p>
+<p>一般把信号的二次方称为信号的瞬时功率，单位是W。信号在一段时间内的能量除以时间长度可得改时间段内信号的平均功率。信号处理中涉及的功率一般是指平均功率。如果信号的功率是有限值，则称其为功率有限信号，简称功率信号。</p>
+</li>
+<li><p><strong>周期（Period）</strong></p>
+<p>信号能量保持完全重复变化规律（即周期信号）的最小时间单位称为周期。对于连续信号，满足$x(t) = x(t+mT)$，对于离散信号满足$x(n) = x(n+mN)$，则他们的周期分别为$T$和$N$（正整数）。</p>
+</li>
+<li><p><strong>频率（Frequency）</strong></p>
+<p>频率通常指每秒钟完成周期性波动的次数，单位是Hz。周期信号的周期$T$与频率$f$互为倒数。</p>
+</li>
+<li><p><strong>基频（Fundamental Frequency）</strong></p>
+<p>任何周期性波形均可分解为一个基频正弦波加上若干谐波（Harmonic Wave）频率的正弦波（傅里叶级数，Fourier Series）。谐波的频率是基频的整倍数，如基频为50Hz，则二次谐波的频率为100 Hz，三次谐波的频率为150 Hz。</p>
+</li>
+<li><p><strong>带宽（Bandwidth）</strong></p>
+<p>信号可以分解为一系列不同频率的正余弦函数的加权和，其带宽就是那些对应的加权非零部分对应的三角函数的频率宽度，也即信号的最高频率分量与最低频率分量之差。</p>
+<blockquote>
+<p>如：由数个正弦波叠加成的方波信号，其最低频率分量是其基频，假定为$f=2kHz$，最高频率分量是其7次谐波频率，即$7f=7\times2=14kHz$，那么该信号的带宽为$7f-f=12kHz$</p>
+</blockquote>
+</li>
+<li><p><strong>包络（Envelope）</strong></p>
+<p>包络指信号在时域上的外部轮廓。把信号时域波形的峰点连接起来得到的曲线称为包络线。例如，对调幅信号进行解调的过程中，通过提取解调信号的包络得到调制信号。</p>
+</li>
+<li><p><strong>频谱（Spectrum）</strong></p>
+<p>频谱可以用于描述信号的各个频率分量。频谱分为幅度谱（Amplitude Spectrum）、相位谱（Phase Spectrum）等，其中幅度谱描述信号的幅度与频率的对应关系，一般是频率的偶对称函数。相位谱描述信号的相位与频谱的对应关系，一般是频率的奇对称函数。</p>
+</li>
+<li><p><strong>功率谱（Power Spectrum）</strong></p>
+<p>功率谱也是频谱的一种，主要用于随机信号的分析。它可以理解为一个坐标轴，横轴是频率，纵轴是功率，即一个描述功率大小分布的随频率而变化的量，也称功率谱密度（Power Spectrum Density）。随机信号是时域无限信号，不具备可积条件，因而不能直接进行傅里叶变换。获取功率谱的一种典型方法是对信号的自相关系数（Auto-Correlation Function）作傅里叶变换。</p>
+</li>
+<li><p><strong>信噪比（Signal to Noise Ratio, SNR)</strong></p>
+<p>现实中的各种信号一般都不是单一或纯净的，即往往含有噪声干扰成分。为了描述这种混合信号中有用信号与噪声信号的比例关系，通常将信噪比定义为有用信号的功率$P_s$与噪声信号的功率$P_n$的比值，并用对数尺度来计算，即$SNR = 10lg(P_s/P_n)$。$SNR$的单位是分贝（dB）。采用各种算法去除噪声，提高信噪比，这是声信号处理在实际应用中的重要工作。</p>
+</li>
+</ol>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/%E5%A3%B0%E5%AD%A6/" rel="tag"># 声学</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name"></p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/%20%7C%7C%20archive">
+              
+                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-name">posts</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                
+                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-name">categories</span>
+                
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                
+                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-name">tags</span>
+                
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/GimHuang" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:kim.huang.j@qq.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%85%B8%E5%9E%8B%E7%9A%84%E5%A3%B0%E5%AD%A6%E6%95%88%E5%BA%94"><span class="nav-number">1.</span> <span class="nav-text">典型的声学效应</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%81%AE%E8%94%BD%E6%95%88%E5%BA%94"><span class="nav-number">1.1.</span> <span class="nav-text">遮蔽效应</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%93%88%E6%96%AF%E6%95%88%E5%BA%94"><span class="nav-number">1.2.</span> <span class="nav-text">哈斯效应</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%B8%A1%E5%B0%BE%E9%85%92%E4%BC%9A%E6%95%88%E5%BA%94"><span class="nav-number">1.3.</span> <span class="nav-text">鸡尾酒会效应</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8F%8C%E8%80%B3%E6%95%88%E5%BA%94"><span class="nav-number">1.4.</span> <span class="nav-text">双耳效应</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%B8%B8%E7%94%A8%E6%A6%82%E5%BF%B5"><span class="nav-number">2.</span> <span class="nav-text">常用概念</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Gim Huang</span>
+
+  
+</div>
+
+
+  <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Gemini</a> v5.1.4</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/three/three.min.js"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/three/three-waves.min.js"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
